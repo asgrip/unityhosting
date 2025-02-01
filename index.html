@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unity Hosting</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1e1e1e;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      padding: 20px 0;
+      text-align: center; /* Center the content inside header */
+      margin-bottom: 40px;
+    }
+
+    .logo-container img {
+      max-width: 150px;
+    }
+
+    /* Main Section */
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px 20px;
+      background-color: #1e1e1e;
+      margin-bottom: 50px;
+    }
+
+    .features h1 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 3.5rem;
+      color: #f8b400;
+      margin-bottom: 40px;
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .feature-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      padding: 40px;
+      text-align: center;
+      background-color: #333;
+      border-radius: 15px;
+      margin: 20px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .feature-card i {
+      font-size: 4rem;
+      color: #f8b400;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h2 {
+      font-size: 1.7rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .feature-card p {
+      color: #bbb;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Pricing Plans Section */
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin: 50px 0;
+      transition: all 0.3s ease;
+    }
+
+    .plan-card {
+      background-color: #1e1e1e;
+      border-radius: 15px;
+      padding: 40px;
+      width: 320px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      margin: 20px;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .plan-card h2 {
+      color: #f8b400;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .plan-card p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      color: #bbb;
+    }
+
+    .btn {
+      background-color: #f8b400;
+      color: #121212;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ff9f00;
+    }
+
+    .discord-btn {
+      margin-top: 40px;
+      background-color: #7289da;
+      color: #fff;
+      padding: 18px 30px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+    .discord-btn:hover {
+      background-color: #5b6e8d;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1c1c1c;
+      text-align: center;
+      padding: 30px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      color: #fff;
+      font-size: 1.1rem;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .plans {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .plan-card, .feature-card {
+        width: 85%;
+        margin: 20px 0;
+      }
+
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature-card {
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="https://media.discordapp.net/attachments/1199739101675528303/1335206151461146684/9L7E2vitQy2Zb5aB5-NTig.jpg?ex=679f5321&is=679e01a1&hm=89f4ea269f1101a8ad636fee79074c2f032e35ea612775721066316228788228&=&format=webp&width=480&height=480" alt="Unity Hosting Logo">
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Features Section -->
+    <section class="features">
+      <h1>Our Features</h1>
+      <div class="feature-card">
+        <i class="fas fa-cogs"></i>
+        <h2>Robust Infrastructure</h2>
+        <p>Top-tier hosting with Intel or AMD processors for unrivaled performance all at an affordable price.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-globe"></i>
+        <h2>Global Reach</h2>
+        <p>Go global with our hosting—multiple locations for low-latency connections, effortlessly reaching diverse audiences.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-shield-alt"></i>
+        <h2>DDoS Protection</h2>
+        <p>All servers are fortified with Powerful DDoS protection—7 layers ensuring a resilient and secure hosting environment.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-gamepad"></i>
+        <h2>Easy Game Panel</h2>
+        <p>Simplify game server management with our Pterodactyl-powered, user-friendly panel. One-click plugins and version control for seamless efficiency.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-trophy"></i>
+        <h2>Trusted Excellence</h2>
+        <p>Host confidently with our stellar 4.8 TrustPilot rating—proof of trust and satisfaction from our valued users.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-clock"></i>
+        <h2>99% Uptime</h2>
+        <p>Reliable hosting with a 98%+ uptime assurance. Your servers stay online, ensuring a seamless experience for your users.</p>
+      </div>
+    </section>
+
+    <!-- Pricing Plans Section -->
+    <section class="plans">
+      <div class="plan-card">
+        <h2>Minecraft Hosting</h2>
+        <p>Powerful Minecraft hosting services to level up your gaming experience.</p>
+        <a href="https://discord.gg/e2qbYACmPu" class="btn">View Plans</a>
+      </div>
+      <div class="plan-card">
+        <h2>VPS Hosting</h2>
+        <p>Reliable and flexible VPS hosting to meet all your performance needs.</p>
+        <a href="https://discord.gg/e2qbYACmPu" class="btn">View Plans</a>
+      </div>
+      <div class="plan-card">
+        <h2>Domains</h2>
+        <p>Get your domain hosted with the best performance and security.</p>
+        <a href="https://discord.gg/e2qbYACmPu" class="btn">View Plans</a>
+      </div>
+    </section>
+
+    <!-- Discord Button -->
+    <a href="https://discord.gg/e2qbYACmPu" class="discord-btn">Join Our Discord</a>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Unity Hosting. All rights reserved.</p>
+    <p> Template made with 💙 by Aman Sky</p>
+  </footer>
+
+  <!-- Font Awesome icons (for feature icons) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>
